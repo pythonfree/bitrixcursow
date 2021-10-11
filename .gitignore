@@ -1,0 +1,12 @@
+.idea/
+/bitrix
+/desktop_app
+/pub
+/source
+/upload
+/.access.php
+/.htaccess
+/access.log
+/error.log
+/storage.php
+/urlrewrite.php
