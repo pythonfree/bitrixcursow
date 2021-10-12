@@ -31,30 +31,22 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Меню
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Главная</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">О сайте</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Контакты</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?$APPLICATION->IncludeComponent("bitrix:menu", "top", Array(
+    "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+    "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+    "DELAY" => "N",	// Откладывать выполнение шаблона меню
+    "MAX_LEVEL" => "1",	// Уровень вложенности меню
+    "MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+        0 => "",
+    ),
+    "MENU_CACHE_TIME" => "3600000",	// Время кеширования (сек.)
+    "MENU_CACHE_TYPE" => "A",	// Тип кеширования
+    "MENU_CACHE_USE_GROUPS" => "N",	// Учитывать права доступа
+    "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+    "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+),
+    false
+);?>
 
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('img/home-bg.jpg')">
