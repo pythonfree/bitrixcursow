@@ -4,7 +4,7 @@
 <head>
 
     <?php
-    /** @global \CMain $APPLICATION */
+    /** @global CMain $APPLICATION */
     $APPLICATION->Showhead();
 
     if (!defined("SITE_TEMPLATE_PATH")) {
