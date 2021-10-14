@@ -1,3 +1,18 @@
+<?$APPLICATION->IncludeComponent(
+    "bitrix:main.include",
+    ".default",
+    array(
+        "AREA_FILE_SHOW" => "sect",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "",
+        "PATH" => "/include/copyright.php",
+        "COMPONENT_TEMPLATE" => ".default",
+        "AREA_FILE_RECURSIVE" => "Y"
+    ),
+    false
+);?>
+
+
 <!-- Footer -->
 <footer>
     <div class="container">
@@ -29,7 +44,16 @@
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+                <p class="copyright text-muted"><?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/include/copyright.php"
+                        )
+                    );?></p>
             </div>
         </div>
     </div>
